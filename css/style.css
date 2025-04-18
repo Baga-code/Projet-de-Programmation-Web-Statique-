@@ -1,0 +1,22 @@
+/* Pour aérer un peu les liens sidebar */
+.nav-link {
+    padding: 6px 0;
+    font-size: 16px;
+  }
+  
+  .nav-item.fw-bold {
+    margin-top: 15px;
+  }
+  
+  /* Responsive: cache la sidebar en mobile */
+  @media (max-width: 768px) {
+    .col-md-3 {
+      display: none;
+    }
+  }
+.logo-header {
+    height: 50px;
+  }
+.date-zone {
+    font-weight: bold;
+  }
