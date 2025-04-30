@@ -1,22 +1,215 @@
-/* Pour aérer un peu les liens sidebar */
-.nav-link {
-    padding: 6px 0;
-    font-size: 16px;
-  }
-  
-  .nav-item.fw-bold {
-    margin-top: 15px;
-  }
-  
-  /* Responsive: cache la sidebar en mobile */
-  @media (max-width: 768px) {
-    .col-md-3 {
-      display: none;
-    }
-  }
-.logo-header {
-    height: 50px;
-  }
-.date-zone {
-    font-weight: bold;
-  }
+
+body { font-family: 'Poppins', sans-serif; background-color:  #66b3b3;  }
+.logo-header { height: 45px; }
+
+/* Titres de sections principales */
+.section-title {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+
+
+/* Navbar */
+.navbar { background-color: #008080; }
+.navbar-nav .nav-link { color: #fff !important; font-weight: 600; padding: 0.5rem 1rem; }
+.navbar-nav .dropdown:hover .dropdown-menu {
+  display: block; margin-top: 0; animation: fadeIn 0.3s ease-in-out;
+}
+
+.logo-uni {
+max-width: 220px;
+height: auto;
+transition: transform 0.3s ease;
+}
+.logo-uni:hover {
+transform: scale(1.05);
+}
+
+
+.universite-section {
+background: rgba(255,255,255,0.05);
+border-radius: 16px;
+padding: 40px 20px;
+box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Glassmorphism pour dropdown horizontal */
+.navbar-nav .dropdown-menu {
+  background-color: rgba(255,255,255,0.25) !important;
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.6);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+.navbar-nav .dropdown-item {
+  color: #0d6efd !important;
+  transition: background-color 0.2s ease;
+}
+.navbar-nav .dropdown-item:hover {
+  background-color: rgba(15,35,214,0.45) !important;
+}
+
+/* Sidebar desktop */
+.sidebar-desktop {
+  position: fixed; top: 70px; left: 0; width: 220px;
+  max-height: 70vh; overflow-y: auto;
+  background-color: #f1f5f9; padding: 1rem;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
+  z-index: 1030;
+}
+.sidebar-desktop .nav-link {
+  font-weight: 500; color: #1e293b; padding: 6px 12px;
+  transition: background 0.2s;
+}
+.sidebar-desktop .nav-link:hover {
+  background-color: #dbeafe; border-radius: 6px; color: #0d6efd;
+}
+.sidebar-desktop .nav-link.has-submenu::after {
+  content: "▼"; font-size: 0.7rem; color: #0d6efd;
+  margin-left: 5px; transition: transform 0.3s;
+}
+.sidebar-desktop .nav > li:hover > .nav-link.has-submenu::after {
+  transform: rotate(180deg);
+}
+.sidebar-desktop .nav ul {
+  display: none; padding-left: 1rem; margin-top: 4px;
+}
+.sidebar-desktop .nav > li:hover > ul { display: block; }
+
+/* Offcanvas mobile (avec Accordion flush) */
+
+.accordion-flush .accordion-button {
+  padding: 8px 12px;
+  font-weight: 600;
+  color: #210871;
+  background: none;
+  border: none;
+}
+.accordion-flush .accordion-button::after {
+  filter: invert(0%);
+  transition: transform 0.3s;
+}
+.accordion-flush .accordion-button:not(.collapsed)::after {
+  transform: rotate(180deg);
+}
+.accordion-flush .accordion-body .nav-link {
+  padding: 4px 10px;
+  color: #0d6efd;
+  transition: background 0.2s;
+}
+.accordion-flush .accordion-body .nav-link:hover {
+  background-color: #e7f1ff;
+}
+
+/* Carousel */
+.carousel img { height: 400px; object-fit: cover; }
+
+/* Footer */
+footer {
+  background-color: #008080;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+@media (min-width: 992px) {
+  .main-content { margin-left: 260px; padding: 2rem; }
+}
+
+@keyframes fadeSlideIn {
+0% {
+opacity: 0;
+transform: translateY(30px);
+}
+100% {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+.animate-on-load {
+animation: fadeSlideIn 1s ease-out;
+}
+.univ-card {
+background: #ffffff;
+border-radius: 12px;
+box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+padding: 20px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.univ-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+.univ-logo {
+max-width: 100%;
+height: 120px;
+object-fit: contain;
+}
+
+
+/* === Marquee / Annonces défilantes === */
+
+#marquee {
+  overflow: hidden;
+  position: relative;
+  height: 2.5rem;        /* réserve la hauteur */
+}
+#marquee p {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  margin: 0;
+  animation: marqueeAnim 12s linear infinite;
+}
+@keyframes marqueeAnim {
+  0%   { left: 100%; }
+  100% { left: -100%; }
+}
+
+/* === Section Traitement === */
+#traitement label { font-weight: 600; }
+#traitement #parametres input {
+  margin-bottom: 0.5rem;
+}
+
+/* === Emploi du temps === */
+#tabsET .nav-link { cursor: pointer; }
+
+/* === Contact === */
+section ul li { margin-bottom: 0.5rem; }
+
+
+
+#sliderPartenaires {
+  scrollbar-width: none; /* Firefox */
+}
+#sliderPartenaires::-webkit-scrollbar {
+  display: none;        /* Chrome/Safari */
+}
+#sliderPartenaires a {
+  flex: 0 0 auto;
+  margin: 0 1rem;
+  text-align: center;
+}
+#sliderPartenaires img {
+  height: 60px;
+  transition: transform 0.3s;
+}
+#sliderPartenaires img:hover {
+  transform: scale(1.1);
+}
+

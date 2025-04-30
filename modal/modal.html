@@ -1,0 +1,287 @@
+ <!-- MODAL TRAITEMENT -->
+ <div class="modal fade" id="traitementModal" tabindex="-1" aria-labelledby="traitementModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+       <div class="modal-content">
+          <div class="modal-header">
+             <h5 class="modal-title" id="traitementModalLabel">Traitement de fonctions</h5>
+             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+             <div class="mb-3">
+                <label for="fonctionSelect" class="form-label">Fonction :</label>
+                <select id="fonctionSelect" class="form-select">
+                   <option value="">--Choisir--</option>
+                   <optgroup label="1 paramètre">
+                      <option value="factorielle">Factorielle (n)</option>
+                      <option value="fibonacci">Fibonacci (n)</option>
+                   </optgroup>
+                   <optgroup label="2 paramètres">
+                      <option value="somme">Somme (a + b)</option>
+                      <option value="difference">Différence (a – b)</option>
+                      <option value="produit">Produit (a × b)</option>
+                      <option value="division">Division (a ÷ b)</option>
+                      <option value="puissance">Puissance (a^b)</option>
+                      <option value="pgcd">PGCD (a, b)</option>
+                   </optgroup>
+                   <optgroup label="3 paramètres">
+                      <option value="moyenne3">Moyenne de 3 valeurs</option>
+                      <option value="volumeCuboid">Volume d’un parallélépipède (l, w, h)</option>
+                      <option value="racines2ndDegre">Racines équation ax²+bx+c</option>
+                   </optgroup>
+                   <optgroup label="4 paramètres">
+                      <option value="det2x2">Déterminant 2×2 (a b; c d)</option>
+                   </optgroup>
+                </select>
+             </div>
+             <div id="parametres" class="mb-3"></div>
+             <button id="calculerBtn" class="btn btn-primary" disabled>Calculer</button>
+             <div id="resultat" class="mt-3 alert alert-info d-none"></div>
+          </div>
+       </div>
+    </div>
+ </div>
+<!-- MODAL PARTENAIRES -->
+<div class="modal fade" id="partenairesModal" tabindex="-1" aria-labelledby="partenairesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="partenairesModalLabel">Nos Partenaires</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+        </div>
+        <div class="modal-body">
+          <div id="sliderPartenaires" class="d-flex overflow-auto py-3 px-2" style="gap: 2rem; white-space: nowrap;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+ <!-- MODAL ACTUALITÉS & EMPLOI DU TEMPS -->
+ <div class="modal fade" id="actualitesModal" tabindex="-1" aria-labelledby="actualitesModalLabel" aria-hidden="true">
+   <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+       <div class="modal-content">
+           <div class="modal-header">
+               <h5 class="modal-title" id="actualitesModalLabel">Actualités & Emploi du temps</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+           </div>
+           <div class="modal-body">
+               <!-- Onglets pour les niveaux -->
+               <ul class="nav nav-tabs" id="tabsETModal" role="tablist">
+                   <li class="nav-item" role="presentation">
+                       <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#modalL1" type="button">L1</button>
+                   </li>
+                   <li class="nav-item" role="presentation">
+                       <button class="nav-link" data-bs-toggle="tab" data-bs-target="#modalL2" type="button">L2</button>
+                   </li>
+                   <li class="nav-item" role="presentation">
+                       <button class="nav-link" data-bs-toggle="tab" data-bs-target="#modalL3" type="button">L3</button>
+                   </li>
+                   <li class="nav-item" role="presentation">
+                       <button class="nav-link" data-bs-toggle="tab" data-bs-target="#modalMaster" type="button">Master</button>
+                   </li>
+               </ul>
+               <div class="tab-content mt-3">
+                   <div class="tab-pane fade show active" id="modalL1" role="tabpanel">
+                       <table class="table table-bordered">
+                           <thead>
+                               <tr>
+                                   <th>Jour</th>
+                                   <th>08h–10h</th>
+                                   <th>10h–12h</th>
+                                   <th>14h–16h</th>
+                               </tr>
+                           </thead>
+                           <tbody>
+                               <tr>
+                                   <td>Lundi</td>
+                                   <td>Math</td>
+                                   <td>Anglais</td>
+                                   <td>Info</td>
+                               </tr>
+                               <tr>
+                                   <td>Mardi</td>
+                                   <td>Physique</td>
+                                   <td>Algo</td>
+                                   <td>Chimie</td>
+                               </tr>
+                               <tr>
+                                   <td>Mercredi</td>
+                                   <td>Math</td>
+                                   <td>Anglais</td>
+                                   <td>Info</td>
+                               </tr>
+                               <tr>
+                                   <td>Jeudi</td>
+                                   <td>Physique</td>
+                                   <td>Algo</td>
+                                   <td>Chimie</td>
+                               </tr>
+                               <tr>
+                                   <td>Vendredi</td>
+                                   <td>Projet</td>
+                                   <td>Révision</td>
+                                   <td>Réunion</td>
+                               </tr>
+                           </tbody>
+                       </table>
+                   </div>
+                   <div class="tab-pane fade" id="modalL2" role="tabpanel">
+                       <table class="table table-bordered">
+                           <thead>
+                               <tr>
+                                   <th>Jour</th>
+                                   <th>08h–10h</th>
+                                   <th>10h–12h</th>
+                                   <th>14h–16h</th>
+                               </tr>
+                           </thead>
+                           <tbody>
+                               <tr>
+                                   <td>Lundi</td>
+                                   <td>Math</td>
+                                   <td>Économie</td>
+                                   <td>Comptabilité</td>
+                               </tr>
+                               <tr>
+                                   <td>Mardi</td>
+                                   <td>Physique</td>
+                                   <td>Chimie</td>
+                                   <td>Math</td>
+                               </tr>
+                               <tr>
+                                   <td>Mercredi</td>
+                                   <td>Algo</td>
+                                   <td>Anglais</td>
+                                   <td>Projet</td>
+                               </tr>
+                               <tr>
+                                   <td>Jeudi</td>
+                                   <td>Math</td>
+                                   <td>Économie</td>
+                                   <td>Comptabilité</td>
+                               </tr>
+                               <tr>
+                                   <td>Vendredi</td>
+                                   <td>Physique</td>
+                                   <td>Chimie</td>
+                                   <td>Réunion</td>
+                               </tr>
+                           </tbody>
+                       </table>
+                   </div>
+                   <div class="tab-pane fade" id="modalL3" role="tabpanel">
+                       <table class="table table-bordered">
+                           <thead>
+                               <tr>
+                                   <th>Jour</th>
+                                   <th>08h–10h</th>
+                                   <th>10h–12h</th>
+                                   <th>14h–16h</th>
+                               </tr>
+                           </thead>
+                           <tbody>
+                               <tr>
+                                   <td>Lundi</td>
+                                   <td>Réseaux</td>
+                                   <td>Théorie des langages</td>
+                                   <td>Projet</td>
+                               </tr>
+                               <tr>
+                                   <td>Mardi</td>
+                                   <td>Algorithmie avancée</td>
+                                   <td>Sécurité</td>
+                                   <td>Gestion de projet</td>
+                               </tr>
+                               <tr>
+                                   <td>Mercredi</td>
+                                   <td>Réseaux</td>
+                                   <td>Théorie des langages</td>
+                                   <td>Projet</td>
+                               </tr>
+                               <tr>
+                                   <td>Jeudi</td>
+                                   <td>Algorithmie avancée</td>
+                                   <td>Sécurité</td>
+                                   <td>Gestion de projet</td>
+                               </tr>
+                               <tr>
+                                   <td>Vendredi</td>
+                                   <td>Révision</td>
+                                   <td>Projet</td>
+                                   <td>Réunion</td>
+                               </tr>
+                           </tbody>
+                       </table>
+                   </div>
+                   <div class="tab-pane fade" id="modalMaster" role="tabpanel">
+                       <table class="table table-bordered">
+                           <thead>
+                               <tr>
+                                   <th>Jour</th>
+                                   <th>08h–10h</th>
+                                   <th>10h–12h</th>
+                                   <th>14h–16h</th>
+                               </tr>
+                           </thead>
+                           <tbody>
+                               <tr>
+                                   <td>Lundi</td>
+                                   <td>Systèmes distribués</td>
+                                   <td>Big Data</td>
+                                   <td>Machine Learning</td>
+                               </tr>
+                               <tr>
+                                   <td>Mardi</td>
+                                   <td>Cryptographie</td>
+                                   <td>Gestion de projet</td>
+                                   <td>Intelligence artificielle</td>
+                               </tr>
+                               <tr>
+                                   <td>Mercredi</td>
+                                   <td>Systèmes distribués</td>
+                                   <td>Big Data</td>
+                                   <td>Machine Learning</td>
+                               </tr>
+                               <tr>
+                                   <td>Jeudi</td>
+                                   <td>Cryptographie</td>
+                                   <td>Gestion de projet</td>
+                                   <td>Intelligence artificielle</td>
+                               </tr>
+                               <tr>
+                                   <td>Vendredi</td>
+                                   <td>Révision</td>
+                                   <td>Projet</td>
+                                   <td>Réunion</td>
+                               </tr>
+                           </tbody>
+                       </table>
+                   </div>
+               </div>
+           </div>
+           <div class="modal-footer">
+               <button class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+           </div>
+       </div>
+   </div>
+</div>
+
+ <!-- MODAL CONTACT -->
+ <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+       <div class="modal-content">
+          <div class="modal-header">
+             <h5 class="modal-title" id="contactModalLabel">Contact</h5>
+             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+             <p><strong>Email :</strong> contact@ifoad-ujkz.bf</p>
+             <p><strong>Téléphone :</strong> +226 66 55 51 54</p>
+             <p><strong>Adresse :</strong> 01 BP 7025, Ouagadougou, Burkina Faso</p>
+          </div>
+          <div class="modal-footer">
+             <button class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+          </div>
+       </div>
+    </div>
+ </div>
+ 

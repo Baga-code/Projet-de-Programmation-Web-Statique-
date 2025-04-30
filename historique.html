@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formation – IFOAD UJKZ</title>
+    <link rel="icon" type="image/png" href="images/ifoad.png" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <!-- Votre CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+<body>
+
+  <!-- header include -->
+  <div id="includer-header"></div>
+
+  <main class="main-content mt-5 pt-3 px-4">
+    <h1 class="section-title text-center mb-4 mt-5">Historique</h1>
+
+    <!-- Nav-Tabs avec 3 sous-menus -->
+    <ul class="nav nav-tabs" role="tablist">
+      <!-- 1) UJKZ : lien externe -->
+      <li class="nav-item">
+        <a id="tab-ujkz" class="nav-link" href="https://www.ujkz.bf/histoire-de-luniversite/" target="_blank" role="tab">
+          UJKZ
+        </a>
+      </li>
+      <!-- 2) IFOAD : onglet interne actif par défaut -->
+      <li class="nav-item">
+        <button id="tab-ifoad" class="nav-link active" data-bs-toggle="tab" data-bs-target="#ifoad" type="button" role="tab">
+          IFOAD
+        </button>
+      </li>
+      <!-- 3) Licence SIA : onglet interne -->
+      <li class="nav-item">
+        <button id="tab-sia" class="nav-link" data-bs-toggle="tab" data-bs-target="#sia" type="button" role="tab">
+          Licence SIA
+        </button>
+      </li>
+    </ul>
+
+    <!-- Contenus des onglets -->
+    <div class="tab-content mt-4">
+      <!-- IFOAD -->
+      <div class="tab-pane fade show active" id="ifoad" role="tabpanel" aria-labelledby="tab-ifoad">
+       
+<article class="animate-on-load">
+    <h2 class="h4 section-title">Institut de Formation Ouverte et à Distance (IFOAD)</h2>
+    <p>
+      Créé en 2010 au sein de l’Université Joseph Ki-Zerbo, l’IFOAD (Institut de Formation Ouverte et à Distance) a pour mission de démocratiser l’accès à l’enseignement supérieur au Burkina Faso.  
+      Grâce à son dispositif e-learning et à une plateforme multimédia, il permet aux étudiants, aux professionnels et aux apprenants éloignés des campus de suivre des formations diplômantes et certifiantes, tout en conciliant études, vie active et contraintes géographiques.
+    </p>
+    <p>
+      L’IFOAD s’appuie sur des ressources pédagogiques numériques (cours vidéo, documents PDF, quiz interactifs) et un encadrement hybride (tuteurs à distance et sessions présentielles ponctuelles).  
+      Il offre aujourd’hui plus de 20 parcours dans les domaines des sciences humaines, de la gestion, de l’informatique et des sciences de la santé.
+    </p>
+    <p>
+      L’institut se distingue par :
+      <ul>
+        <li>Une bibliothèque numérique de plus de 20 000 références accessible 24/7 ;</li>
+        <li>Des sessions de visioconférence assurées par des experts internationaux ;</li>
+        <li>Un réseau de tuteurs-formateurs localisés dans chaque région du Burkina Faso.</li>
+      </ul>
+    </p>
+  </article>
+  
+
+  
+      </div>
+
+      <!-- Licence SIA -->
+      <div class="tab-pane fade" id="sia" role="tabpanel" aria-labelledby="tab-sia">
+        <article class="animate-on-load">
+  <h2 class="h4 section-title">Licence Sciences Informatiques Appliquées (SIA)</h2>
+  <p>
+    Lancée en 2016 par l’IFOAD-UJKZ, la Licence SIA est une formation universitaire de trois ans (6 semestres)
+    conçue pour répondre aux besoins croissants en professionnels du numérique en Afrique de l’Ouest.
+    Elle combine un tronc commun solide et deux options de spécialisation en troisième année.
+  </p>
+  <p>
+    <strong>Structure du cursus :</strong>
+    <ul>
+      <li><strong>Semestres 1 & 2 :</strong> algorithmique, structures de données, architecture des ordinateurs, bases de données, 
+        mathématiques discrètes</li>
+      <li><strong>Semestres 3 & 4 :</strong> langages de programmation (Java, Python), développement web, réseaux, systèmes d’exploitation</li>
+      <li><strong>Semestre 5 :</strong> début de spécialisation : Génie Logiciel (analyse UML, tests, CI/CD) ou Réseaux & Systèmes 
+        (virtualisation, sécurité, administration Linux)</li>
+      <li><strong>Semestre 6 :</strong> stage de fin d’études en entreprise + mémoire/projet tuteuré</li>
+    </ul>
+  </p>
+  <p>
+    <strong>Débouchés :</strong>  
+    Développeur logiciel, administrateur réseau, ingénieur sécurité, consultant en solutions numériques, 
+    chef de projet informatique.  
+    La licence est aussi un tremplin vers des masters spécialisés (IA, cybersécurité, big data).
+  </p>
+</article>
+      </div>
+    </div>
+    
+    <!-- ajout des modals   -->
+    <div id="includer-modal"></div>
+  </main>
+
+  <!-- footer include -->
+  <div id="includer-footer"></div>
+
+  <!-- Scripts -->
+
+    
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

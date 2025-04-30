@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formation – IFOAD UJKZ</title>
+  <link rel="icon" type="image/png" href="images/ifoad.png" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Votre CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- header include -->
+  <div id="includer-header"></div>
+
+  <main class="main-content mt-5 mb-4 pt-3 px-4">
+    <!-- Titre de la section -->
+    <h1 class="section-title text-center mb-4 mt-5">Formation</h1>
+
+    <!-- Onglets Licence / Master / Débouchés -->
+    <ul class="nav nav-tabs justify-content-center" role="tablist">
+      <li class="nav-item">
+        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tabLicence" type="button" role="tab">
+          Licence
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tabMaster" type="button" role="tab">
+          Master
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tabDebouches" type="button" role="tab">
+          Débouchés
+        </button>
+      </li>
+    </ul>
+
+    <div class="tab-content mt-4">
+
+      <!-- Licence -->
+      <div class="tab-pane fade show active" id="tabLicence" role="tabpanel">
+        <article class="animate-on-load">
+          <h2 class="h4 section-title">Licence</h2>
+          <p>
+            L’IFOAD-UJKZ propose actuellement une <strong>Licence Sciences Informatiques Appliquées (SIA)</strong> :
+          </p>
+          <ul>
+            <li>Durée : 3 ans (6 semestres)</li>
+            <li>Tronc commun (algorithmique, bases de données, réseaux)</li>
+            <li>Options en 3ᵉ année : Génie Logiciel ou Réseaux & Systèmes</li>
+            <li>Stage de fin d’études et projet tuteuré</li>
+          </ul>
+          <p>
+            Pour plus de détails, consultez la <a href="programme.html#sia">page Programme</a> ou téléchargez la <a href="documentation.html#licence">documentation Licence</a>.
+          </p>
+        </article>
+      </div>
+
+      <!-- Master -->
+      <div class="tab-pane fade" id="tabMaster" role="tabpanel">
+        <article class="animate-on-load">
+          <h2 class="h4 section-title">Master</h2>
+          <p>
+            Nos masters offrent une spécialisation avancée :
+          </p>
+          <ul>
+            <li><strong>Master en Cybersécurité</strong> : gestion des risques, cryptographie, sécurité réseau</li>
+            <li><strong>Master en Intelligence Artificielle</strong> : apprentissage automatique, vision par ordinateur</li>
+            <li><strong>Master en Big Data</strong> : traitement de données massives, architectures distribuées</li>
+          </ul>
+          <p>
+            Chaque parcours inclut :  
+            <em>cours théoriques, travaux pratiques, séminaires de recherche</em> et un mémoire de fin d’études.  
+            Référez-vous à la <a href="programme.html#master">page Programme</a> ou au PDF de la <a href="documentation.html#master">documentation Master</a>.
+          </p>
+        </article>
+      </div>
+
+      <!-- Débouchés -->
+      <div class="tab-pane fade" id="tabDebouches" role="tabpanel">
+        <article class="animate-on-load">
+          <h2 class="h4 section-title">Débouchés</h2>
+          <p>
+            Les diplômés de nos formations s’insèrent rapidement sur le marché :
+          </p>
+          <ul>
+            <li>Développeur/Développeuse d’applications</li>
+            <li>Administrateur/Administratrice réseau et systèmes</li>
+            <li>Consultant(e) en sécurité informatique</li>
+            <li>Data Analyst / Data Scientist</li>
+            <li>Chef de projet informatique</li>
+          </ul>
+          <p>
+            Ils travaillent dans : banques, télécommunications, e-commerce, administrations publiques ou organismes internationaux.
+          </p>
+        </article>
+      </div>
+
+    </div>
+    
+    <!-- ajout des modals -->
+    <div id="includer-modal"></div>
+  </main>
+
+  <!-- footer include -->
+  <div id="includer-footer"></div>
+
+  <!-- Bootstrap JS + votre JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

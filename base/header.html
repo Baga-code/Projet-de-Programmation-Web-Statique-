@@ -1,0 +1,171 @@
+<header> 
+    <!-- NAVBAR HORIZONTALE -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+       <div class="container-fluid px-3">
+          <a href="index.html"><img src="images/université/ifoad.png" class="logo-header me-2" alt="IFOAD" /></a>
+          <button class="navbar-toggler ms-auto" type="button"
+             data-bs-toggle="collapse" data-bs-target="#navbarContent">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+             <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle has-submenu" href="historique.html" data-bs-toggle="dropdown">Historique</a>
+                   <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="https://www.ujkz.bf/histoire-de-luniversite/" target="_blank">UJKZ</a></li>
+                      <li><a class="dropdown-item" href="historique.html#ifoad">IFOAD</a></li>
+                      <li><a class="dropdown-item" href="historique.html#sia">Licence SIA</a></li>
+                   </ul>
+                </li>
+                <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle has-submenu" href="formation.html" data-bs-toggle="dropdown">Formation</a>
+                   <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="formation.html#tabLicence">Licence</a></li>
+                      <li><a class="dropdown-item" href="formation.html#tabMaster">Master</a></li>
+                      <li><a class="dropdown-item" href="formation.html#tabDebouches">Débouchés</a></li>
+                   </ul>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#partenairesModal">
+                   Partenaires
+                   </a>
+                </li>
+                <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Documentation</a>
+                   <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="documentation.html#docLicence">Licence</a></li>
+                      <li><a class="dropdown-item" href="documentation.html#docMaster">Master</a></li>
+                   </ul>
+                </li>
+                <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle has-submenu" href="#" data-bs-toggle="dropdown">Établissements</a>
+                   <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="https://www.ujkz.bf/ufr-sea/" target="_blank">SEA</a></li>
+                      <li><a class="dropdown-item" href="https://www.ujkz.bf/ifoad/" target="_blank">IFOAD</a></li>
+                      <li><a class="dropdown-item" href="https://www.ujkz.bf/ibam/" target="_blank">IBAM</a></li>
+                      <li><a class="dropdown-item" href="https://www.ujkz.bf/issp/" target="_blank">ISSP</a></li>
+                      <li><a class="dropdown-item" href="https://www.ujkz.bf/igedd/" target="_blank">IGEED</a></li>
+                      <li><a class="dropdown-item" href="https://www.ujkz.bf/ufr-sh/" target="_blank">SH</a></li>
+                      <li><a class="dropdown-item" href="https://www.ujkz.bf/ufr-lac/" target="_blank">LAC</a></li>
+                      <li><a class="dropdown-item" href="https://www.ujkz.bf/ufr-svt/" target="_blank">SVT</a></li>
+                      <li><a class="dropdown-item" href="https://www.ujkz.bf/issdh/" target="_blank">ISSDH</a></li>
+                        <li><a class="dropdown-item" href="https://www.ujkz.bf/ipremic/" target="_blank">IPERMIC</a></li>
+                      <li><a class="dropdown-item" href="https://www.ujkz.bf/ufr-sds/" target="_blank">SDS</a></li>
+                   </ul>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#traitementModal">
+                   Traitement
+                   </a>
+                </li>
+             </ul>
+             <div class="d-lg-none text-start mt-3 ps-3">
+                <img src="images/université/ujkz.png" alt="Logo UJKZ" class="logo-header" style="height: 40px;">
+             </div>
+          </div>
+          <img src="images/université/ujkz.png" class="logo-header ms-2 d-none d-lg-block" alt="UJKZ" />
+       </div>
+    </nav>
+    <!-- BOUTON OFFCANVAS MOBILE -->
+    <div class="d-lg-none position-relative" style="margin-top:80px; padding-left:15px;">
+       <button class="btn btn-outline-primary" data-bs-toggle="offcanvas" data-bs-target="#menuVertical">
+       ☰ Menu Département
+       </button>
+    </div>
+    <!-- OFFCANVAS MOBILE -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="menuVertical">
+       <div class="offcanvas-header">
+          <h5 class="offcanvas-title">Navigation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+       </div>
+       <div class="offcanvas-body">
+          <ul class="nav flex-column mb-3">
+             <li><a class="nav-link fw-bold" href="admission.html">Admission</a></li>
+          </ul>
+          <div class="accordion accordion-flush" id="mobileNavAccordion">
+             <div class="accordion-item">
+                <h2 class="accordion-header" id="headingProg">
+                   <button class="accordion-button collapsed" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#collapseProg"
+                      aria-expanded="false" aria-controls="collapseProg">
+                   Programme
+                   </button>
+                </h2>
+                <div id="collapseProg" class="accordion-collapse collapse"
+                   aria-labelledby="headingProg" data-bs-parent="#mobileNavAccordion">
+                   <div class="accordion-body p-0">
+                      <ul class="nav flex-column ms-3 mb-3">
+                         <li><a class="nav-link" href="programme.html#L1">Licence 1</a></li>
+                         <li><a class="nav-link" href="programme.html#L2">Licence 2</a></li>
+                         <li><a class="nav-link" href="programme.html#L3">Licence 3</a></li>
+                         <li><a class="nav-link" href="programme.html#Master">Master</a></li>
+                      </ul>
+                   </div>
+                </div>
+             </div>
+             <div class="accordion-item">
+                <h2 class="accordion-header" id="headingPers">
+                   <button class="accordion-button collapsed" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#collapsePers"
+                      aria-expanded="false" aria-controls="collapsePers">
+                   Personnel
+                   </button>
+                </h2>
+                <div id="collapsePers" class="accordion-collapse collapse"
+                   aria-labelledby="headingPers" data-bs-parent="#mobileNavAccordion">
+                   <div class="accordion-body p-0">
+                      <ul class="nav flex-column ms-3 mb-3">
+                         <li><a class="nav-link" href="personnel.html#enseignants">Enseignants</a></li>
+                         <li><a class="nav-link" href="personnel.html#atos">ATOS</a></li>
+                      </ul>
+                   </div>
+                </div>
+             </div>
+          </div>
+          <ul class="nav flex-column">
+             <li>
+                <a class="nav-link fw-bold" href="#" 
+                   data-bs-toggle="modal" data-bs-target="#actualitesModal">
+                Actualités & Emplois du temps
+                </a>
+             </li>
+             <a class="nav-link fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">
+             Contact
+             </a>
+          </ul>
+       </div>
+    </div>
+    <!-- SIDEBAR DESKTOP -->
+    <div class="sidebar-desktop d-none d-lg-block">
+       <h5 class="mb-3">Menu Département</h5>
+       <ul class="nav flex-column">
+          <li><a class="nav-link fw-bold" href="admission.html">Admission</a></li>
+          <li>
+             <a class="nav-link fw-bold has-submenu" href="programme.html">Programme</a>
+             <ul class="nav flex-column ms-3">
+                <li><a class="nav-link" href="programme.html#L1">Licence 1</a></li>
+                <li><a class="nav-link" href="programme.html#L2">Licence 2</a></li>
+                <li><a class="nav-link" href="programme.html#L3">Licence 3</a></li>
+                <li><a class="nav-link" href="programme.html#Master">Master</a></li>
+             </ul>
+          </li>
+          <li>
+             <a class="nav-link fw-bold has-submenu" href="#">Personnel</a>
+             <ul class="nav flex-column ms-3">
+                <li><a class="nav-link" href="personnel.html#enseignants">Enseignants</a></li>
+                <li><a class="nav-link" href="personnel.html#atos">ATOS</a></li>
+             </ul>
+          </li>
+          <li>
+             <a class="nav-link fw-bold" href="#" 
+                data-bs-toggle="modal" data-bs-target="#actualitesModal">
+             Actualités & Emplois du temps
+             </a>
+          </li>
+          <a class="nav-link fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">
+          Contact
+          </a>
+       </ul>
+    </div>
+ </header>
